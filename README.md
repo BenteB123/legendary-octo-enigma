@@ -11,6 +11,10 @@
 	```sh
 	dotnet restore
 	```
+2. Trust the local cert:
+	```
+	dotnet dev-certs https --trust
+	```
 
 3. Update the database using Entity Framework migrations:
 	```sh
