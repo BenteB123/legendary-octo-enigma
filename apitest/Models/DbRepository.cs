@@ -5,15 +5,16 @@ namespace apitest.Models
 {
     public class DbRepository : IDbRepository
     {
-        private readonly AppDbContext _context;
+        private readonly EnigmaDbContext _context;
 
-        public DbRepository(AppDbContext context)
+        public DbRepository(EnigmaDbContext context)
         {
             _context = context;
         }
 
         public Task<Whish> CreateWhish(Whish whish)
         {
+            // _context.Whishes.Add(whish);
             throw new NotImplementedException();
         }
 

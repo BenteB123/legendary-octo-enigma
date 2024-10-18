@@ -5,6 +5,7 @@ public class Whish : Traceable
 {
     public int Id { get; set; }
     public required Person Owner { get; set; }
+    public int OwnerId { get => Owner.Id; }
     public required string GiftName { get; set; }
     public WhishStatus Status { get; set; }
     public string? Description { get; set; }
@@ -53,8 +54,7 @@ public enum ExpirationType
 public class Traceable
 {
     public DateTime CreatedAt { get; set; }
-    public DateTime UpdatedAt { get; set; }
-
     public required Person CreatedBy { get; set; }
+    public DateTime UpdatedAt { get; set; }
     public required Person UpdatedBy { get; set; }
 }
